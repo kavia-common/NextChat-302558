@@ -1,0 +1,1085 @@
+2026-01-04 23:36:15,702 - Knowledge - INFO - Created shared MongoDB connection pool
+2026-01-04 23:36:16,033 - Knowledge - INFO - Starting Knowledge Graph processing with 20 threads
+2026-01-04 23:36:16,249 - Knowledge - INFO - Initial configuration: chunk_size=65536, max_cache_size=500
+2026-01-04 23:36:16,461 - Knowledge - INFO - Knowledge Graph concurrency configuration: workers=20, max_batch_size=10, max_concurrent_llm_calls=50
+2026-01-04 23:36:17,992 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2026-01-04 23:36:18,189 - Knowledge - WARNING - ❌ load_from_redis method not found - Redis support not attached
+2026-01-04 23:36:18,361 - Knowledge - INFO - load persisted knowledge: begin
+2026-01-04 23:36:18,579 - Knowledge - INFO - Loaded 0 files from persisted knowledge
+2026-01-04 23:36:18,797 - Knowledge - INFO - load persisted knowledge: end
+2026-01-04 23:36:19,016 - Knowledge - WARNING - No persisted knowledge found. Files will be queued during start()
+2026-01-04 23:36:19,234 - Knowledge - INFO - Redis support added with prefix knowledge:b1186j2:
+2026-01-04 23:36:19,639 - Knowledge - INFO - Starting knowledge initialization for ID: pN4meo-b1186j2
+2026-01-04 23:36:19,858 - Knowledge - INFO - 🔍 Checking Redis for build_id: b1186j2
+2026-01-04 23:36:20,039 - Knowledge - INFO - 🔍 Full session ID: pN4meo-b1186j2
+2026-01-04 23:36:20,238 - Knowledge - INFO - 🔍 Redis prefix will be: knowledge:b1186j2:
+2026-01-04 23:36:20,401 - Knowledge - INFO - 🔍 Using attached load_from_redis() method
+2026-01-04 23:36:20,608 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2026-01-04 23:36:20,792 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b1186j2
+2026-01-04 23:36:20,996 - Knowledge - WARNING - ❌ No Redis cache found
+2026-01-04 23:36:21,178 - Knowledge - INFO - 📁 Loading knowledge from disk...
+2026-01-04 23:36:21,400 - Knowledge - INFO - load persisted docinfo: begin
+2026-01-04 23:36:21,575 - Knowledge - INFO - load persisted docinfo: end
+2026-01-04 23:36:21,765 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2026-01-04 23:36:21,944 - Knowledge - INFO - ✅ load_from_redis method found - attempting Redis load
+2026-01-04 23:36:22,139 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2026-01-04 23:36:22,322 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b1186j2
+2026-01-04 23:36:22,489 - Knowledge - WARNING - ❌ No Redis cache found
+2026-01-04 23:36:22,648 - Knowledge - INFO - ❌ Redis load returned False - falling back to file loading
+2026-01-04 23:36:22,863 - Knowledge - INFO - load persisted knowledge: begin
+2026-01-04 23:36:23,070 - Knowledge - INFO - Loaded 0 files from persisted knowledge
+2026-01-04 23:36:23,254 - Knowledge - INFO - load persisted knowledge: end
+2026-01-04 23:36:23,466 - Knowledge - INFO - 📁 Disk load complete in 2.11s
+2026-01-04 23:36:23,665 - Knowledge - INFO - Populating ingest queue with source files...
+2026-01-04 23:36:23,977 - Knowledge - INFO - Added 215 files from /app/data/T0015/302558/b1186j2/NextChat-302558 to ingest queue
+2026-01-04 23:36:24,181 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 160, Duration: 0ms
+2026-01-04 23:36:24,412 - Knowledge - INFO - Worker kw1 created using shared MongoDB connection pool
+2026-01-04 23:36:24,641 - Knowledge - INFO - knowledge worker kw1 start
+2026-01-04 23:36:24,644 - Knowledge - INFO - Worker kw2 created using shared MongoDB connection pool
+2026-01-04 23:36:24,829 - Knowledge - INFO - [kw1] Queue=215, InProgress=0, PendingWorkers=0/1, Completed=0/215 (0.0%)
+2026-01-04 23:36:24,932 - Knowledge - INFO - knowledge worker kw2 start
+2026-01-04 23:36:24,932 - Knowledge - INFO - Worker kw3 created using shared MongoDB connection pool
+2026-01-04 23:36:25,052 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=215, active_workers=0/2
+2026-01-04 23:36:25,144 - Knowledge - INFO - [kw2] Queue=215, InProgress=0, PendingWorkers=0/2, Completed=0/215 (0.0%)
+2026-01-04 23:36:25,253 - Knowledge - INFO - knowledge worker kw3 start
+2026-01-04 23:36:25,253 - Knowledge - INFO - Worker kw4 created using shared MongoDB connection pool
+2026-01-04 23:36:25,350 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/302558/b1186j2/NextChat-302558/scripts/fetch-prompts.mjs
+2026-01-04 23:36:25,417 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=215, active_workers=1/3
+2026-01-04 23:36:25,502 - Knowledge - INFO - [kw3] Queue=209, InProgress=0, PendingWorkers=1/3, Completed=0/215 (0.0%)
+2026-01-04 23:36:25,599 - Knowledge - INFO - knowledge worker kw4 start
+2026-01-04 23:36:25,599 - Knowledge - INFO - Worker kw5 created using shared MongoDB connection pool
+2026-01-04 23:36:25,713 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/302558/b1186j2/NextChat-302558/scripts/init-proxy.sh
+2026-01-04 23:36:25,791 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/302558/b1186j2/NextChat-302558/src-tauri/Cargo.toml
+2026-01-04 23:36:25,870 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=209, active_workers=2/4
+2026-01-04 23:36:25,958 - Knowledge - INFO - [kw4] Queue=203, InProgress=0, PendingWorkers=2/4, Completed=0/215 (0.0%)
+2026-01-04 23:36:26,033 - Knowledge - INFO - knowledge worker kw5 start
+2026-01-04 23:36:26,033 - Knowledge - INFO - Worker kw6 created using shared MongoDB connection pool
+2026-01-04 23:36:26,148 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/scripts/init-proxy.sh (ext=.sh, size=234)
+2026-01-04 23:36:26,267 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/src-tauri/Cargo.toml (ext=.toml, size=1342)
+2026-01-04 23:36:26,392 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/global.d.ts
+2026-01-04 23:36:26,475 - Knowledge - INFO - Batch sizing: calculated=6, max_allowed=10, queue=203, active_workers=3/5
+2026-01-04 23:36:26,568 - Knowledge - INFO - [kw5] Queue=197, InProgress=0, PendingWorkers=3/5, Completed=0/215 (0.0%)
+2026-01-04 23:36:26,663 - Knowledge - INFO - knowledge worker kw6 start
+2026-01-04 23:36:26,663 - Knowledge - INFO - Worker kw7 created using shared MongoDB connection pool
+2026-01-04 23:36:26,740 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/302558/b1186j2/NextChat-302558/scripts/setup.sh
+2026-01-04 23:36:26,839 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/302558/b1186j2/NextChat-302558/src-tauri/tauri.conf.json
+2026-01-04 23:36:26,955 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/global.d.ts (ext=.ts, size=837)
+2026-01-04 23:36:27,041 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useUploadImage.ts
+2026-01-04 23:36:27,113 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=197, active_workers=4/6
+2026-01-04 23:36:27,280 - Knowledge - INFO - [kw6] Queue=191, InProgress=0, PendingWorkers=4/6, Completed=0/215 (0.0%)
+2026-01-04 23:36:27,360 - Knowledge - INFO - knowledge worker kw7 start
+2026-01-04 23:36:27,360 - Knowledge - INFO - Worker kw8 created using shared MongoDB connection pool
+2026-01-04 23:36:27,479 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/302558/b1186j2/NextChat-302558/scripts/delete-deployment-preview.sh
+2026-01-04 23:36:27,576 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/src-tauri/tauri.conf.json (ext=.json, size=2846)
+2026-01-04 23:36:27,695 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useDrag.ts
+2026-01-04 23:36:27,775 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useUploadImage.ts (ext=.ts, size=1998)
+2026-01-04 23:36:27,848 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useRelativePosition.ts
+2026-01-04 23:36:27,934 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=191, active_workers=5/7
+2026-01-04 23:36:28,010 - Knowledge - INFO - [kw7] Queue=186, InProgress=0, PendingWorkers=5/7, Completed=0/215 (0.0%)
+2026-01-04 23:36:28,121 - Knowledge - INFO - knowledge worker kw8 start
+2026-01-04 23:36:28,121 - Knowledge - INFO - Worker kw9 created using shared MongoDB connection pool
+2026-01-04 23:36:28,199 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/scripts/delete-deployment-preview.sh (ext=.sh, size=1410)
+2026-01-04 23:36:28,272 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/302558/b1186j2/NextChat-302558/src-tauri/build.rs
+2026-01-04 23:36:28,363 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useDrag.ts (ext=.ts, size=1886)
+2026-01-04 23:36:28,463 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useHotKey.ts
+2026-01-04 23:36:28,584 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useSwitchTheme.ts
+2026-01-04 23:36:28,677 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/window.scss
+2026-01-04 23:36:28,773 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=186, active_workers=6/8
+2026-01-04 23:36:28,868 - Knowledge - INFO - [kw8] Queue=181, InProgress=0, PendingWorkers=6/8, Completed=0/215 (0.0%)
+2026-01-04 23:36:28,951 - Knowledge - INFO - knowledge worker kw9 start
+2026-01-04 23:36:28,952 - Knowledge - INFO - Worker kw10 created using shared MongoDB connection pool
+2026-01-04 23:36:29,069 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/302558/b1186j2/NextChat-302558/package.json
+2026-01-04 23:36:29,193 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/src-tauri/build.rs (ext=.rs, size=37)
+2026-01-04 23:36:29,311 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useShowPromptHint.ts
+2026-01-04 23:36:29,398 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useHotKey.ts (ext=.ts, size=562)
+2026-01-04 23:36:29,476 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useSwitchTheme.ts (ext=.ts, size=1474)
+2026-01-04 23:36:29,574 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/window.scss (ext=.scss, size=628)
+2026-01-04 23:36:29,654 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/globals.css
+2026-01-04 23:36:29,744 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=181, active_workers=7/9
+2026-01-04 23:36:29,828 - Knowledge - INFO - [kw9] Queue=176, InProgress=0, PendingWorkers=7/9, Completed=0/215 (0.0%)
+2026-01-04 23:36:29,909 - Knowledge - INFO - knowledge worker kw10 start
+2026-01-04 23:36:29,909 - Knowledge - INFO - Worker kw11 created using shared MongoDB connection pool
+2026-01-04 23:36:30,029 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/package.json (ext=.json, size=2408)
+2026-01-04 23:36:30,135 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/302558/b1186j2/NextChat-302558/postcss.config.js
+2026-01-04 23:36:30,218 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useShowPromptHint.ts (ext=.ts, size=673)
+2026-01-04 23:36:30,343 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useListenWinResize.ts
+2026-01-04 23:36:30,435 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/usePaste.ts
+2026-01-04 23:36:30,528 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/highlight.scss
+2026-01-04 23:36:30,640 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/globals.css (ext=.css, size=482)
+2026-01-04 23:36:30,762 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/openai/[...path]/route.ts
+2026-01-04 23:36:30,851 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=176, active_workers=8/10
+2026-01-04 23:36:30,945 - Knowledge - INFO - [kw10] Queue=171, InProgress=0, PendingWorkers=8/10, Completed=0/215 (0.0%)
+2026-01-04 23:36:31,031 - Knowledge - INFO - knowledge worker kw11 start
+2026-01-04 23:36:31,032 - Knowledge - INFO - Worker kw12 created using shared MongoDB connection pool
+2026-01-04 23:36:31,134 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/302558/b1186j2/NextChat-302558/src-tauri/src/main.rs
+2026-01-04 23:36:31,245 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/postcss.config.js (ext=.js, size=82)
+2026-01-04 23:36:31,340 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useSubmitHandler.ts
+2026-01-04 23:36:31,439 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useListenWinResize.ts (ext=.ts, size=1349)
+2026-01-04 23:36:31,531 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/command.ts
+2026-01-04 23:36:31,603 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/highlight.scss (ext=.scss, size=1720)
+2026-01-04 23:36:31,725 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/azure.ts
+2026-01-04 23:36:31,845 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/config/route.ts
+2026-01-04 23:36:31,955 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/auth.ts
+2026-01-04 23:36:32,057 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=171, active_workers=9/11
+2026-01-04 23:36:32,139 - Knowledge - INFO - [kw11] Queue=166, InProgress=0, PendingWorkers=9/11, Completed=0/215 (0.0%)
+2026-01-04 23:36:32,229 - Knowledge - INFO - knowledge worker kw12 start
+2026-01-04 23:36:32,229 - Knowledge - INFO - Worker kw13 created using shared MongoDB connection pool
+2026-01-04 23:36:32,340 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/src-tauri/src/main.rs (ext=.rs, size=345)
+2026-01-04 23:36:32,460 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/typing.ts
+2026-01-04 23:36:32,557 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useSubmitHandler.ts (ext=.ts, size=1529)
+2026-01-04 23:36:32,674 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useScrollToBottom.ts
+2026-01-04 23:36:32,755 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/command.ts (ext=.ts, size=1867)
+2026-01-04 23:36:32,856 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/animation.scss
+2026-01-04 23:36:32,971 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/azure.ts (ext=.ts, size=262)
+2026-01-04 23:36:33,051 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/config/route.ts (ext=.ts, size=816)
+2026-01-04 23:36:33,163 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/markdown.tsx
+2026-01-04 23:36:33,263 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Screen/index.tsx
+2026-01-04 23:36:33,350 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=166, active_workers=10/12
+2026-01-04 23:36:33,430 - Knowledge - INFO - [kw12] Queue=161, InProgress=0, PendingWorkers=10/12, Completed=0/215 (0.0%)
+2026-01-04 23:36:33,537 - Knowledge - INFO - knowledge worker kw13 start
+2026-01-04 23:36:33,538 - Knowledge - INFO - Worker kw14 created using shared MongoDB connection pool
+2026-01-04 23:36:33,659 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/scripts/fetch-prompts.mjs (small file (2132 bytes))
+2026-01-04 23:36:33,737 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/typing.ts (ext=.ts, size=255)
+2026-01-04 23:36:33,865 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useLoadData.ts
+2026-01-04 23:36:33,972 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useScrollToBottom.ts (ext=.ts, size=1382)
+2026-01-04 23:36:34,081 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/base-new.scss
+2026-01-04 23:36:34,171 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/animation.scss (ext=.scss, size=303)
+2026-01-04 23:36:34,280 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/page.tsx
+2026-01-04 23:36:34,363 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/common.ts
+2026-01-04 23:36:34,469 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Input/index.tsx
+2026-01-04 23:36:34,578 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Screen/index.tsx (ext=.tsx, size=1819)
+2026-01-04 23:36:34,670 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/new-chat.tsx
+2026-01-04 23:36:34,739 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=161, active_workers=11/13
+2026-01-04 23:36:34,824 - Knowledge - INFO - [kw13] Queue=156, InProgress=0, PendingWorkers=11/13, Completed=0/215 (0.0%)
+2026-01-04 23:36:34,919 - Knowledge - INFO - knowledge worker kw14 start
+2026-01-04 23:36:34,919 - Knowledge - INFO - Worker kw15 created using shared MongoDB connection pool
+2026-01-04 23:36:35,033 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/scripts/setup.sh (small file (2170 bytes))
+2026-01-04 23:36:35,155 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/polyfill.ts
+2026-01-04 23:36:35,289 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useLoadData.ts (ext=.ts, size=816)
+2026-01-04 23:36:35,379 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useWindowSize.ts
+2026-01-04 23:36:35,460 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/base-new.scss (ext=.scss, size=11252)
+2026-01-04 23:36:35,549 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/globals.scss
+2026-01-04 23:36:35,655 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/page.tsx (ext=.tsx, size=370)
+2026-01-04 23:36:35,742 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/webdav/[...path]/route.ts
+2026-01-04 23:36:35,853 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/ui-lib.module.scss
+2026-01-04 23:36:35,929 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/message-selector.tsx
+2026-01-04 23:36:36,027 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Btn/index.tsx
+2026-01-04 23:36:36,106 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/mask.module.scss
+2026-01-04 23:36:36,222 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=156, active_workers=12/14
+2026-01-04 23:36:36,306 - Knowledge - INFO - [kw14] Queue=151, InProgress=0, PendingWorkers=12/14, Completed=0/215 (0.0%)
+2026-01-04 23:36:36,393 - Knowledge - INFO - knowledge worker kw15 start
+2026-01-04 23:36:36,393 - Knowledge - INFO - Worker kw16 created using shared MongoDB connection pool
+2026-01-04 23:36:36,495 - Knowledge - INFO - Processing batch of 6 files
+2026-01-04 23:36:36,599 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/polyfill.ts (ext=.ts, size=623)
+2026-01-04 23:36:36,686 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useMobileScreen.ts
+2026-01-04 23:36:36,771 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useWindowSize.ts (ext=.ts, size=888)
+2026-01-04 23:36:36,850 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useRelativePosition.ts (small file (2835 bytes))
+2026-01-04 23:36:36,938 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/globals.scss (ext=.scss, size=6273)
+2026-01-04 23:36:37,048 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/anthropic/[...path]/route.ts
+2026-01-04 23:36:37,159 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/google/[...path]/route.ts
+2026-01-04 23:36:37,257 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/ui-lib.module.scss (ext=.scss, size=5523)
+2026-01-04 23:36:37,349 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Imgs/index.tsx
+2026-01-04 23:36:37,448 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Btn/index.tsx (ext=.tsx, size=1889)
+2026-01-04 23:36:37,571 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/mask.module.scss (ext=.scss, size=2186)
+2026-01-04 23:36:37,688 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/chat-list.tsx
+2026-01-04 23:36:37,769 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=151, active_workers=13/15
+2026-01-04 23:36:37,848 - Knowledge - INFO - [kw15] Queue=146, InProgress=0, PendingWorkers=13/15, Completed=6/215 (2.8%)
+2026-01-04 23:36:37,951 - Knowledge - INFO - knowledge worker kw16 start
+2026-01-04 23:36:37,951 - Knowledge - INFO - Worker kw17 created using shared MongoDB connection pool
+2026-01-04 23:36:38,069 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/scripts/fetch-prompts.mjs
+2026-01-04 23:36:38,174 - Knowledge - INFO - Processing batch of 6 files
+2026-01-04 23:36:38,263 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useMobileScreen.ts (ext=.ts, size=247)
+2026-01-04 23:36:38,346 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useRows.ts
+2026-01-04 23:36:38,439 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/usePaste.ts (small file (2222 bytes))
+2026-01-04 23:36:38,562 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/markdown.scss
+2026-01-04 23:36:38,656 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/upstash/[action]/[...key]/route.ts
+2026-01-04 23:36:38,772 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/openai/[...path]/route.ts (small file (2212 bytes))
+2026-01-04 23:36:38,860 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Select/index.tsx
+2026-01-04 23:36:38,954 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Imgs/index.tsx (ext=.tsx, size=1056)
+2026-01-04 23:36:39,064 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/List/index.tsx
+2026-01-04 23:36:39,136 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/button.module.scss
+2026-01-04 23:36:39,215 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/exporter.tsx
+2026-01-04 23:36:39,304 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Loading/index.tsx
+2026-01-04 23:36:39,408 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=146, active_workers=14/16
+2026-01-04 23:36:39,489 - Knowledge - INFO - [kw16] Queue=141, InProgress=0, PendingWorkers=14/16, Completed=12/215 (5.6%)
+2026-01-04 23:36:39,576 - Knowledge - INFO - knowledge worker kw17 start
+2026-01-04 23:36:39,576 - Knowledge - INFO - Worker kw18 created using shared MongoDB connection pool
+2026-01-04 23:36:39,659 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/scripts/init-proxy.sh
+2026-01-04 23:36:39,744 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/src-tauri/Cargo.toml
+2026-01-04 23:36:39,843 - Knowledge - INFO - Processing batch of 6 files
+2026-01-04 23:36:39,914 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useRows.ts (ext=.ts, size=866)
+2026-01-04 23:36:40,057 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:36:40,136 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/markdown.scss (ext=.scss, size=25937)
+2026-01-04 23:36:40,236 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/upstash/[action]/[...key]/route.ts (ext=.ts, size=1865)
+2026-01-04 23:36:40,435 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/auth.ts (small file (2861 bytes))
+2026-01-04 23:36:40,538 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/auth.module.scss
+2026-01-04 23:36:40,653 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Switch/index.tsx
+2026-01-04 23:36:40,731 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/button.module.scss (ext=.scss, size=1332)
+2026-01-04 23:36:40,818 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/home.tsx
+2026-01-04 23:36:40,929 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Loading/index.tsx (ext=.tsx, size=734)
+2026-01-04 23:36:41,010 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/ThumbnailImg/index.tsx
+2026-01-04 23:36:41,094 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=141, active_workers=15/17
+2026-01-04 23:36:41,214 - Knowledge - INFO - [kw17] Queue=136, InProgress=0, PendingWorkers=15/17, Completed=23/215 (10.7%)
+2026-01-04 23:36:41,331 - Knowledge - INFO - knowledge worker kw18 start
+2026-01-04 23:36:41,332 - Knowledge - INFO - Worker kw19 created using shared MongoDB connection pool
+2026-01-04 23:36:41,423 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/scripts/setup.sh
+2026-01-04 23:36:41,515 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/src-tauri/tauri.conf.json
+2026-01-04 23:36:41,620 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/global.d.ts
+2026-01-04 23:36:41,755 - Knowledge - INFO - Processing batch of 6 files
+2026-01-04 23:36:41,798 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useRelativePosition.ts
+2026-01-04 23:36:41,876 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:36:42,199 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/auth.module.scss (ext=.scss, size=882)
+2026-01-04 23:36:42,235 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/google/[...path]/route.ts (small file (2709 bytes))
+2026-01-04 23:36:42,305 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Switch/index.tsx (ext=.tsx, size=899)
+2026-01-04 23:36:42,397 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/ActionsBar/index.tsx
+2026-01-04 23:36:42,506 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/SlideRange/index.tsx
+2026-01-04 23:36:42,596 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/settings.tsx
+2026-01-04 23:36:42,695 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/ThumbnailImg/index.tsx (ext=.tsx, size=820)
+2026-01-04 23:36:42,813 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/chat.tsx
+2026-01-04 23:36:42,895 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=136, active_workers=16/18
+2026-01-04 23:36:42,978 - Knowledge - INFO - [kw18] Queue=131, InProgress=0, PendingWorkers=16/18, Completed=34/215 (15.8%)
+2026-01-04 23:36:43,063 - Knowledge - INFO - knowledge worker kw19 start
+2026-01-04 23:36:43,063 - Knowledge - INFO - Worker kw20 created using shared MongoDB connection pool
+2026-01-04 23:36:43,180 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/scripts/delete-deployment-preview.sh
+2026-01-04 23:36:43,275 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/src-tauri/build.rs
+2026-01-04 23:36:43,359 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useDrag.ts
+2026-01-04 23:36:43,442 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useUploadImage.ts
+2026-01-04 23:36:43,547 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useSwitchTheme.ts
+2026-01-04 23:36:43,629 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/window.scss
+2026-01-04 23:36:43,736 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/input-range.module.scss
+2026-01-04 23:36:43,827 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Input/index.tsx (small file (2572 bytes))
+2026-01-04 23:36:43,922 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Card/index.tsx
+2026-01-04 23:36:44,024 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Search/index.module.scss
+2026-01-04 23:36:44,101 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/chat.module.scss
+2026-01-04 23:36:44,181 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/emoji.tsx
+2026-01-04 23:36:44,255 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/button.tsx
+2026-01-04 23:36:44,336 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/MenuLayout/index.tsx
+2026-01-04 23:36:44,425 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/sidebar.tsx
+2026-01-04 23:36:44,528 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=131, active_workers=17/19
+2026-01-04 23:36:44,621 - Knowledge - INFO - [kw19] Queue=126, InProgress=0, PendingWorkers=17/19, Completed=34/215 (15.8%)
+2026-01-04 23:36:44,711 - Knowledge - INFO - knowledge worker kw20 start
+2026-01-04 23:36:44,821 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/package.json
+2026-01-04 23:36:44,910 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/postcss.config.js
+2026-01-04 23:36:45,025 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useShowPromptHint.ts
+2026-01-04 23:36:45,125 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useHotKey.ts
+2026-01-04 23:36:45,232 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/usePaste.ts
+2026-01-04 23:36:45,309 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/highlight.scss
+2026-01-04 23:36:45,631 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/input-range.module.scss (ext=.scss, size=255)
+2026-01-04 23:36:45,915 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Card/index.tsx (ext=.tsx, size=647)
+2026-01-04 23:36:46,073 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Search/index.module.scss (ext=.scss, size=504)
+2026-01-04 23:36:46,228 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/chat.module.scss (ext=.scss, size=11262)
+2026-01-04 23:36:46,371 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/emoji.tsx (ext=.tsx, size=1549)
+2026-01-04 23:36:46,474 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/button.tsx (ext=.tsx, size=1177)
+2026-01-04 23:36:46,607 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Popover/index.tsx
+2026-01-04 23:36:46,726 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/input-range.tsx
+2026-01-04 23:36:46,838 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/auth.tsx
+2026-01-04 23:36:46,966 - Knowledge - INFO - [LLM_CALL] Completed: route.ts:chunk1, Duration: 4983ms, PromptTokens: 3072, CompletionTokens: 299, Cost: $0.00043
+2026-01-04 23:36:46,974 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=126, active_workers=18/20
+2026-01-04 23:36:47,068 - Knowledge - INFO - [kw20] Queue=121, InProgress=0, PendingWorkers=18/20, Completed=34/215 (15.8%)
+2026-01-04 23:36:47,179 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/src-tauri/src/main.rs
+2026-01-04 23:36:47,272 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/typing.ts
+2026-01-04 23:36:47,361 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useSubmitHandler.ts
+2026-01-04 23:36:47,454 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useListenWinResize.ts
+2026-01-04 23:36:47,545 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/command.ts
+2026-01-04 23:36:47,635 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/animation.scss
+2026-01-04 23:36:47,948 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Search/index.tsx
+2026-01-04 23:36:48,172 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/model-config.tsx
+2026-01-04 23:36:48,261 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/mask.tsx
+2026-01-04 23:36:48,383 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/exporter.module.scss
+2026-01-04 23:36:48,502 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/input-range.tsx (ext=.tsx, size=694)
+2026-01-04 23:36:48,573 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/HoverPopover/index.tsx
+2026-01-04 23:36:48,658 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/anthropic/[...path]/route.ts
+2026-01-04 23:36:48,658 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/webdav/[...path]/route.ts
+2026-01-04 23:36:48,738 - Knowledge - INFO - Worker kw19 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/config/build.ts
+2026-01-04 23:36:48,857 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=121, active_workers=19/20
+2026-01-04 23:36:49,078 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/polyfill.ts
+2026-01-04 23:36:49,119 - Knowledge - INFO - [LLM_CALL] Completed: index.tsx:chunk1, Duration: 3367ms, PromptTokens: 2468, CompletionTokens: 272, Cost: $0.00036
+2026-01-04 23:36:49,190 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useLoadData.ts
+2026-01-04 23:36:49,356 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useScrollToBottom.ts
+2026-01-04 23:36:49,439 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/base-new.scss
+2026-01-04 23:36:49,531 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/globals.scss
+2026-01-04 23:36:49,611 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Search/index.tsx (ext=.tsx, size=686)
+2026-01-04 23:36:49,730 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/message-selector.module.scss
+2026-01-04 23:36:49,811 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/new-chat.module.scss
+2026-01-04 23:36:49,904 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/exporter.module.scss (ext=.scss, size=5352)
+2026-01-04 23:36:49,980 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/error.tsx
+2026-01-04 23:36:50,056 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/HoverPopover/index.tsx (ext=.tsx, size=1011)
+2026-01-04 23:36:50,422 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/config/build.ts (ext=.ts, size=1148)
+2026-01-04 23:36:50,741 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Select/index.tsx
+2026-01-04 23:36:50,744 - Knowledge - INFO - [LLM_CALL] Completed: common.ts:chunk1, Duration: 10393ms, PromptTokens: 3018, CompletionTokens: 276, Cost: $0.00041
+2026-01-04 23:36:50,831 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useMobileScreen.ts
+2026-01-04 23:36:50,911 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useWindowSize.ts
+2026-01-04 23:36:51,146 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/markdown.scss
+2026-01-04 23:36:51,251 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/message-selector.module.scss (ext=.scss, size=1300)
+2026-01-04 23:36:51,332 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/new-chat.module.scss (ext=.scss, size=2487)
+2026-01-04 23:36:51,439 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/home.module.scss
+2026-01-04 23:36:51,562 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/error.tsx (ext=.tsx, size=1997)
+2026-01-04 23:36:51,646 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/GlobalLoading/index.tsx
+2026-01-04 23:36:51,743 - Knowledge - INFO - Worker kw19 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils.ts
+2026-01-04 23:36:51,956 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/common.ts
+2026-01-04 23:36:51,960 - Knowledge - INFO - Worker kw20 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/PromptHint.tsx
+2026-01-04 23:36:52,008 - Knowledge - INFO - [kw5] Queue=111, InProgress=0, PendingWorkers=20/20, Completed=37/215 (17.2%)
+2026-01-04 23:36:52,026 - Knowledge - INFO - [kw2] Queue=111, InProgress=0, PendingWorkers=20/20, Completed=37/215 (17.2%)
+2026-01-04 23:36:52,032 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 290, Duration: 0ms
+2026-01-04 23:36:52,389 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/hooks/useRows.ts
+2026-01-04 23:36:52,586 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Modal/index.tsx
+2026-01-04 23:36:52,730 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/home.module.scss (ext=.scss, size=5759)
+2026-01-04 23:36:52,848 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/settings.module.scss
+2026-01-04 23:36:52,959 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/GlobalLoading/index.tsx (ext=.tsx, size=380)
+2026-01-04 23:36:53,042 - Knowledge - INFO - Worker kw19 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/SessionItem.tsx
+2026-01-04 23:36:53,233 - Knowledge - INFO - Worker kw20 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ChatMessagePanel.tsx
+2026-01-04 23:36:53,353 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=111, active_workers=20/20
+2026-01-04 23:36:53,472 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=111, active_workers=20/20
+2026-01-04 23:36:53,588 - Knowledge - INFO - [LLM_CALL] Completed: message-selector.tsx:chunk1, Duration: 4928ms, PromptTokens: 4022, CompletionTokens: 299, Cost: $0.00052
+2026-01-04 23:36:53,999 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/settings.module.scss (ext=.scss, size=1257)
+2026-01-04 23:36:54,102 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/config/client.ts
+2026-01-04 23:36:54,184 - Knowledge - INFO - Worker kw19 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ClearContextDivider.tsx
+2026-01-04 23:36:54,254 - Knowledge - INFO - Worker kw20 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/PromptToast.tsx
+2026-01-04 23:36:54,546 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/message-selector.tsx
+2026-01-04 23:36:54,548 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 2516ms
+2026-01-04 23:36:54,668 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/ui-lib.tsx
+2026-01-04 23:36:54,755 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/config/client.ts (ext=.ts, size=607)
+2026-01-04 23:36:54,871 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ClearContextDivider.tsx (ext=.tsx, size=1408)
+2026-01-04 23:36:54,954 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/PromptToast.tsx (ext=.tsx, size=874)
+2026-01-04 23:36:55,153 - Knowledge - INFO - Progress: 16.7% | Files: 40/215 | Rate: 1.10 files/sec | Queue: 101
+2026-01-04 23:36:55,154 - Knowledge - INFO - [LLM_CALL] Completed: markdown.tsx:chunk1, Duration: 13059ms, PromptTokens: 3416, CompletionTokens: 431, Cost: $0.00051
+2026-01-04 23:36:55,395 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/config/server.ts
+2026-01-04 23:36:55,488 - Knowledge - INFO - Worker kw19 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/SessionConfigModal.tsx
+2026-01-04 23:36:55,578 - Knowledge - INFO - Worker kw20 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ChatHeader.tsx
+2026-01-04 23:36:55,660 - Knowledge - INFO - [kw1] Queue=101, InProgress=0, PendingWorkers=20/20, Completed=40/215 (18.6%)
+2026-01-04 23:36:55,751 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/markdown.tsx
+2026-01-04 23:36:55,791 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:36:55,791 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-01-04 23:36:55,804 - Knowledge - INFO - [kw4] Queue=101, InProgress=0, PendingWorkers=20/20, Completed=42/215 (19.5%)
+2026-01-04 23:36:55,810 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 290, Duration: 19ms
+2026-01-04 23:36:55,846 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/auth.tsx (small file (2810 bytes))
+2026-01-04 23:36:56,048 - Knowledge - INFO - Worker kw20 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ChatActions.tsx
+2026-01-04 23:36:56,137 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=101, active_workers=20/20
+2026-01-04 23:36:56,378 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ModelSelect.tsx
+2026-01-04 23:36:56,462 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/index.tsx
+2026-01-04 23:36:56,566 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=101, active_workers=20/20
+2026-01-04 23:36:56,684 - Knowledge - INFO - [kw3] Queue=101, InProgress=0, PendingWorkers=20/20, Completed=43/215 (20.0%)
+2026-01-04 23:36:56,686 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 895ms
+2026-01-04 23:36:56,947 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/PromptHint.tsx (small file (2814 bytes))
+2026-01-04 23:36:57,187 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/EditMessageModal.tsx
+2026-01-04 23:36:57,333 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/ChatPanel.tsx
+2026-01-04 23:36:57,610 - Knowledge - INFO - Batch sizing: calculated=5, max_allowed=10, queue=101, active_workers=20/20
+2026-01-04 23:36:57,823 - Knowledge - INFO - Progress: 19.1% | Files: 45/215 | Rate: 1.12 files/sec | Queue: 91
+2026-01-04 23:36:57,829 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:36:57,842 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-01-04 23:36:57,847 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-01-04 23:36:57,873 - Knowledge - INFO - [LLM_CALL] Completed: index.tsx:chunk1, Duration: 5858ms, PromptTokens: 2398, CompletionTokens: 272, Cost: $0.00035
+2026-01-04 23:36:58,065 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ChatInputPanel.tsx
+2026-01-04 23:36:58,143 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Sidebar/index.tsx
+2026-01-04 23:36:58,329 - Knowledge - INFO - [kw6] Queue=86, InProgress=0, PendingWorkers=20/20, Completed=46/215 (21.4%)
+2026-01-04 23:36:58,405 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/styles/globals.css
+2026-01-04 23:36:58,531 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/SyncItems.tsx
+2026-01-04 23:36:58,643 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/PromptSetting.tsx
+2026-01-04 23:36:58,768 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/ActionsBar/index.tsx
+2026-01-04 23:36:58,769 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/List/index.tsx
+2026-01-04 23:36:58,770 - Knowledge - INFO - Async storing batch of 6 embeddings
+2026-01-04 23:36:58,790 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:36:58,793 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:36:58,794 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:36:58,854 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/MessageActions.tsx
+2026-01-04 23:36:58,974 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/DangerItems.tsx
+2026-01-04 23:36:59,073 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=86, active_workers=20/20
+2026-01-04 23:36:59,173 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/azure.ts
+2026-01-04 23:36:59,253 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/ModelSetting.tsx
+2026-01-04 23:36:59,367 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/PromptSetting.tsx (ext=.tsx, size=1920)
+2026-01-04 23:36:59,498 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:36:59,662 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/index.tsx
+2026-01-04 23:36:59,707 - Knowledge - INFO - [LLM_CALL] Completed: new-chat.tsx:chunk1, Duration: 11047ms, PromptTokens: 3464, CompletionTokens: 478, Cost: $0.00054
+2026-01-04 23:36:59,759 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Screen/index.tsx
+2026-01-04 23:36:59,866 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/openai/[...path]/route.ts
+2026-01-04 23:36:59,951 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/auth.ts
+2026-01-04 23:37:00,038 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/index.module.scss
+2026-01-04 23:37:00,116 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/SettingHeader.tsx
+2026-01-04 23:37:00,307 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/page.tsx
+2026-01-04 23:37:00,431 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/AppSetting.tsx
+2026-01-04 23:37:00,549 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/UserPromptModal.tsx
+2026-01-04 23:37:00,641 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/mask.module.scss
+2026-01-04 23:37:00,736 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/SettingPanel.tsx
+2026-01-04 23:37:00,855 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/new-chat.tsx
+2026-01-04 23:37:00,855 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:00,953 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/message-selector.tsx
+2026-01-04 23:37:01,036 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/config/route.ts
+2026-01-04 23:37:01,121 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/markdown.tsx
+2026-01-04 23:37:01,224 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/index.module.scss (ext=.scss, size=11009)
+2026-01-04 23:37:01,236 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/SlideRange/index.tsx (small file (2733 bytes))
+2026-01-04 23:37:01,309 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/SettingHeader.tsx (ext=.tsx, size=1309)
+2026-01-04 23:37:01,401 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/anthropic/[...path]/route.ts
+2026-01-04 23:37:01,491 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/ProviderSetting.tsx
+2026-01-04 23:37:01,598 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/MaskSetting.tsx
+2026-01-04 23:37:01,675 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/button.module.scss
+2026-01-04 23:37:01,785 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/index.tsx
+2026-01-04 23:37:01,907 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:37:01,947 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/object.ts
+2026-01-04 23:37:02,069 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Imgs/index.tsx
+2026-01-04 23:37:02,146 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/common.ts
+2026-01-04 23:37:02,218 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Input/index.tsx
+2026-01-04 23:37:02,325 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:37:02,561 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-01-04 23:37:02,681 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/upstash/[action]/[...key]/route.ts
+2026-01-04 23:37:02,784 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/SyncConfigModal.tsx
+2026-01-04 23:37:02,858 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/MaskSetting.tsx (ext=.tsx, size=1073)
+2026-01-04 23:37:02,978 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/ActionsBar/index.tsx
+2026-01-04 23:37:03,080 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/client.ts
+2026-01-04 23:37:03,200 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/new-chat.tsx
+2026-01-04 23:37:03,287 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/object.ts (ext=.ts, size=397)
+2026-01-04 23:37:03,355 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/auth.module.scss
+2026-01-04 23:37:03,482 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/webdav/[...path]/route.ts
+2026-01-04 23:37:03,641 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/ui-lib.module.scss
+2026-01-04 23:37:04,228 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-01-04 23:37:04,427 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/MaskConfig.tsx
+2026-01-04 23:37:04,560 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Search/index.module.scss
+2026-01-04 23:37:04,706 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/client.ts (ext=.ts, size=911)
+2026-01-04 23:37:04,830 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Btn/index.tsx
+2026-01-04 23:37:04,859 - Knowledge - INFO - [LLM_CALL] Completed: model-config.tsx:chunk1, Duration: 9060ms, PromptTokens: 3464, CompletionTokens: 320, Cost: $0.00047
+2026-01-04 23:37:04,932 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/sync.ts
+2026-01-04 23:37:05,070 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/input-range.module.scss
+2026-01-04 23:37:05,316 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/api/google/[...path]/route.ts
+2026-01-04 23:37:05,386 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Select/index.tsx
+2026-01-04 23:37:05,603 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/index.module.scss
+2026-01-04 23:37:05,719 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Search/index.tsx
+2026-01-04 23:37:05,918 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/cors.ts
+2026-01-04 23:37:06,006 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/List/index.tsx
+2026-01-04 23:37:06,091 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/model-config.tsx
+2026-01-04 23:37:06,092 - Knowledge - INFO - [LLM_CALL] Completed: server.ts:chunk1, Duration: 8259ms, PromptTokens: 2702, CompletionTokens: 230, Cost: $0.00036
+2026-01-04 23:37:06,270 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/store.ts
+2026-01-04 23:37:06,853 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ChatHeader.tsx (small file (2754 bytes))
+2026-01-04 23:37:06,854 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/index.module.scss (ext=.scss, size=1207)
+2026-01-04 23:37:07,110 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/cors.ts (ext=.ts, size=425)
+2026-01-04 23:37:07,493 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/config/server.ts
+2026-01-04 23:37:07,578 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/store.ts (ext=.ts, size=1443)
+2026-01-04 23:37:07,763 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-01-04 23:37:07,907 - Knowledge - INFO - Async storage completed for 6 embeddings
+2026-01-04 23:37:07,993 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 290, Duration: 0ms
+2026-01-04 23:37:08,009 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Switch/index.tsx
+2026-01-04 23:37:08,170 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/token.ts
+2026-01-04 23:37:08,737 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/index.tsx (small file (2629 bytes))
+2026-01-04 23:37:08,797 - Knowledge - INFO - [LLM_CALL] Completed: chat-list.tsx:chunk1, Duration: 20136ms, PromptTokens: 2928, CompletionTokens: 417, Cost: $0.00046
+2026-01-04 23:37:09,032 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/token.ts (ext=.ts, size=465)
+2026-01-04 23:37:09,093 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Card/index.tsx
+2026-01-04 23:37:09,199 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/chat-list.tsx
+2026-01-04 23:37:09,201 - Knowledge - INFO - [LLM_CALL] Completed: settings.tsx:chunk1, Duration: 15613ms, PromptTokens: 15890, CompletionTokens: 778, Cost: $0.00190
+2026-01-04 23:37:09,296 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:37:09,650 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/settings.tsx
+2026-01-04 23:37:09,657 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 1664ms
+2026-01-04 23:37:10,194 - Knowledge - INFO - Progress: 29.8% | Files: 65/215 | Rate: 1.25 files/sec | Queue: 82
+2026-01-04 23:37:10,384 - Knowledge - INFO - [kw10] Queue=82, InProgress=0, PendingWorkers=20/20, Completed=66/215 (30.7%)
+2026-01-04 23:37:10,507 - Knowledge - INFO - [LLM_CALL] Completed: exporter.tsx:chunk1, Duration: 18525ms, PromptTokens: 9410, CompletionTokens: 787, Cost: $0.00126
+2026-01-04 23:37:10,557 - Knowledge - INFO - [kw8] Queue=82, InProgress=0, PendingWorkers=20/20, Completed=67/215 (31.2%)
+2026-01-04 23:37:10,557 - Knowledge - INFO - [kw9] Queue=82, InProgress=0, PendingWorkers=20/20, Completed=67/215 (31.2%)
+2026-01-04 23:37:10,558 - Knowledge - INFO - [kw12] Queue=82, InProgress=0, PendingWorkers=20/20, Completed=69/215 (32.1%)
+2026-01-04 23:37:10,558 - Knowledge - INFO - [kw7] Queue=82, InProgress=0, PendingWorkers=20/20, Completed=69/215 (32.1%)
+2026-01-04 23:37:10,591 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=82, active_workers=20/20
+2026-01-04 23:37:10,666 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/exporter.tsx
+2026-01-04 23:37:10,727 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:37:10,727 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:37:10,801 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=82, active_workers=20/20
+2026-01-04 23:37:10,827 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 291, Duration: 0ms
+2026-01-04 23:37:10,890 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=82, active_workers=20/20
+2026-01-04 23:37:11,012 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=82, active_workers=20/20
+2026-01-04 23:37:11,116 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=82, active_workers=20/20
+2026-01-04 23:37:11,425 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Loading/index.tsx
+2026-01-04 23:37:11,539 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/auth.tsx
+2026-01-04 23:37:11,677 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/EditMessageModal.tsx (small file (2220 bytes))
+2026-01-04 23:37:11,803 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:11,804 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 976ms
+2026-01-04 23:37:11,814 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:11,905 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/SessionConfigModal.tsx (small file (2514 bytes))
+2026-01-04 23:37:12,258 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/settings.tsx
+2026-01-04 23:37:12,359 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/HoverPopover/index.tsx
+2026-01-04 23:37:12,536 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/clone.ts
+2026-01-04 23:37:12,630 - Knowledge - INFO - Progress: 34.4% | Files: 74/215 | Rate: 1.34 files/sec | Queue: 62
+2026-01-04 23:37:12,630 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:12,630 - Knowledge - INFO - [LLM_CALL] Completed: home.tsx:chunk1, Duration: 16820ms, PromptTokens: 3516, CompletionTokens: 708, Cost: $0.00063
+2026-01-04 23:37:12,630 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:12,630 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:12,728 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/merge.ts
+2026-01-04 23:37:13,028 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/emoji.tsx
+2026-01-04 23:37:13,151 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/GlobalLoading/index.tsx
+2026-01-04 23:37:13,233 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/clone.ts (ext=.ts, size=271)
+2026-01-04 23:37:13,305 - Knowledge - INFO - [kw11] Queue=62, InProgress=0, PendingWorkers=20/20, Completed=74/215 (34.4%)
+2026-01-04 23:37:13,407 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/cloud/index.ts
+2026-01-04 23:37:13,505 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/home.tsx
+2026-01-04 23:37:13,754 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/chat.ts
+2026-01-04 23:37:13,866 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/access.ts
+2026-01-04 23:37:13,959 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/merge.ts (ext=.ts, size=419)
+2026-01-04 23:37:14,169 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/model-config.tsx
+2026-01-04 23:37:14,314 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/config/client.ts
+2026-01-04 23:37:14,600 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/model.ts
+2026-01-04 23:37:14,754 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=62, active_workers=20/20
+2026-01-04 23:37:14,921 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/cloud/index.ts (ext=.ts, size=787)
+2026-01-04 23:37:15,188 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/index.ts
+2026-01-04 23:37:15,347 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/tw.ts
+2026-01-04 23:37:15,431 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/checkers.ts
+2026-01-04 23:37:15,570 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:37:15,616 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/message-selector.module.scss
+2026-01-04 23:37:15,732 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/config/server.ts
+2026-01-04 23:37:15,870 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/format.ts
+2026-01-04 23:37:15,942 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:16,067 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/update.ts
+2026-01-04 23:37:16,262 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/index.ts (ext=.ts, size=102)
+2026-01-04 23:37:16,407 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/ar.ts
+2026-01-04 23:37:16,486 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/checkers.ts (ext=.ts, size=626)
+2026-01-04 23:37:16,597 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/chat-list.tsx
+2026-01-04 23:37:17,079 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/format.ts (ext=.ts, size=843)
+2026-01-04 23:37:17,173 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/vi.ts
+2026-01-04 23:37:17,296 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/sync.ts
+2026-01-04 23:37:17,425 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/config.ts
+2026-01-04 23:37:17,630 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/en.ts
+2026-01-04 23:37:17,723 - Knowledge - INFO - [LLM_CALL] Completed: sidebar.tsx:chunk1, Duration: 21039ms, PromptTokens: 4380, CompletionTokens: 522, Cost: $0.00065
+2026-01-04 23:37:17,739 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/cloud/webdav.ts
+2026-01-04 23:37:18,009 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/hooks.ts
+2026-01-04 23:37:18,134 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/ru.ts
+2026-01-04 23:37:18,226 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/exporter.tsx
+2026-01-04 23:37:18,283 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/mask.ts
+2026-01-04 23:37:18,503 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/prompt.ts
+2026-01-04 23:37:18,639 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/sidebar.tsx
+2026-01-04 23:37:18,641 - Knowledge - INFO - [LLM_CALL] Completed: mask.tsx:chunk1, Duration: 22888ms, PromptTokens: 8964, CompletionTokens: 501, Cost: $0.00110
+2026-01-04 23:37:18,749 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/cloud/upstash.ts
+2026-01-04 23:37:18,858 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/hooks.ts (ext=.ts, size=584)
+2026-01-04 23:37:18,975 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/no.ts
+2026-01-04 23:37:19,058 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/home.tsx
+2026-01-04 23:37:19,576 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/mask.tsx
+2026-01-04 23:37:19,592 - Knowledge - INFO - [LLM_CALL] Completed: SessionItem.tsx:chunk1, Duration: 16527ms, PromptTokens: 3422, CompletionTokens: 305, Cost: $0.00046
+2026-01-04 23:37:19,695 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/cloud/webdav.ts (small file (2321 bytes))
+2026-01-04 23:37:19,793 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/model.ts (small file (2513 bytes))
+2026-01-04 23:37:19,919 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/id.ts
+2026-01-04 23:37:19,988 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/SlideRange/index.tsx
+2026-01-04 23:37:20,194 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/SessionItem.tsx
+2026-01-04 23:37:20,231 - Knowledge - INFO - [LLM_CALL] Completed: ui-lib.tsx:chunk1, Duration: 18357ms, PromptTokens: 6248, CompletionTokens: 737, Cost: $0.00092
+2026-01-04 23:37:20,381 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:37:20,583 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/chat.module.scss
+2026-01-04 23:37:21,034 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/ui-lib.tsx
+2026-01-04 23:37:21,048 - Knowledge - INFO - [kw18] Queue=58, InProgress=0, PendingWorkers=20/20, Completed=79/215 (36.7%)
+2026-01-04 23:37:21,054 - Knowledge - INFO - [LLM_CALL] Completed: index.tsx:chunk1, Duration: 10833ms, PromptTokens: 4788, CompletionTokens: 464, Cost: $0.00066
+2026-01-04 23:37:21,864 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=58, active_workers=20/20
+2026-01-04 23:37:21,958 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Modal/index.tsx
+2026-01-04 23:37:22,046 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 289, Duration: 63ms
+2026-01-04 23:37:22,341 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:22,368 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 385ms
+2026-01-04 23:37:22,667 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/it.ts
+2026-01-04 23:37:22,840 - Knowledge - INFO - Progress: 36.7% | Files: 84/215 | Rate: 1.28 files/sec | Queue: 54
+2026-01-04 23:37:23,101 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/cn.ts
+2026-01-04 23:37:23,413 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/de.ts
+2026-01-04 23:37:23,599 - Knowledge - INFO - [kw14] Queue=54, InProgress=0, PendingWorkers=20/20, Completed=87/215 (40.5%)
+2026-01-04 23:37:23,687 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/pt.ts
+2026-01-04 23:37:23,747 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:37:23,766 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:37:23,767 - Knowledge - INFO - [LLM_CALL] Completed: utils.ts:chunk1, Duration: 27081ms, PromptTokens: 4814, CompletionTokens: 1026, Cost: $0.00089
+2026-01-04 23:37:23,865 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=54, active_workers=20/20
+2026-01-04 23:37:24,107 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/clone.ts
+2026-01-04 23:37:24,272 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/sidebar.tsx
+2026-01-04 23:37:24,384 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils.ts
+2026-01-04 23:37:24,385 - Knowledge - INFO - [LLM_CALL] Completed: ChatMessagePanel.tsx:chunk1, Duration: 25616ms, PromptTokens: 4378, CompletionTokens: 411, Cost: $0.00060
+2026-01-04 23:37:24,564 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/model.ts
+2026-01-04 23:37:24,674 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/input-range.tsx
+2026-01-04 23:37:24,968 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ChatMessagePanel.tsx
+2026-01-04 23:37:25,001 - Knowledge - INFO - [LLM_CALL] Completed: sync.ts:chunk1, Duration: 14780ms, PromptTokens: 3236, CompletionTokens: 502, Cost: $0.00052
+2026-01-04 23:37:25,121 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/format.ts
+2026-01-04 23:37:25,334 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/error.tsx
+2026-01-04 23:37:25,546 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/sync.ts
+2026-01-04 23:37:25,581 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:25,667 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 291, Duration: 0ms
+2026-01-04 23:37:25,688 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/hooks.ts
+2026-01-04 23:37:25,822 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/settings.module.scss
+2026-01-04 23:37:26,121 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/bn.ts
+2026-01-04 23:37:26,269 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:37:26,269 - Knowledge - INFO - [LLM_CALL] Completed: ChatActions.tsx:chunk1, Duration: 18567ms, PromptTokens: 4792, CompletionTokens: 548, Cost: $0.00070
+2026-01-04 23:37:26,564 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/ui-lib.tsx
+2026-01-04 23:37:26,642 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/fr.ts
+2026-01-04 23:37:26,719 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/ThumbnailImg/index.tsx
+2026-01-04 23:37:26,846 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ChatActions.tsx
+2026-01-04 23:37:26,846 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 1265ms
+2026-01-04 23:37:27,115 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/index.ts
+2026-01-04 23:37:27,373 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/button.tsx
+2026-01-04 23:37:27,394 - Knowledge - INFO - Progress: 43.7% | Files: 97/215 | Rate: 1.39 files/sec | Queue: 50
+2026-01-04 23:37:27,397 - Knowledge - INFO - [LLM_CALL] Completed: index.tsx:chunk1, Duration: 5422ms, PromptTokens: 6214, CompletionTokens: 308, Cost: $0.00074
+2026-01-04 23:37:27,494 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/es.ts
+2026-01-04 23:37:27,581 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/mask.tsx
+2026-01-04 23:37:27,676 - Knowledge - INFO - [kw13] Queue=50, InProgress=0, PendingWorkers=20/20, Completed=98/215 (45.6%)
+2026-01-04 23:37:27,799 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Popover/index.tsx
+2026-01-04 23:37:27,802 - Knowledge - INFO - [kw10] Queue=50, InProgress=0, PendingWorkers=20/20, Completed=98/215 (45.6%)
+2026-01-04 23:37:27,803 - Knowledge - INFO - [kw17] Queue=50, InProgress=0, PendingWorkers=20/20, Completed=99/215 (46.0%)
+2026-01-04 23:37:27,835 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:37:27,835 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:37:27,840 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:37:28,006 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/new-chat.module.scss
+2026-01-04 23:37:28,090 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=50, active_workers=20/20
+2026-01-04 23:37:28,464 - Knowledge - INFO - [LLM_CALL] Completed: index.tsx:chunk1, Duration: 662ms, PromptTokens: 2528, CompletionTokens: 313, Cost: $0.00038
+2026-01-04 23:37:28,486 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=50, active_workers=20/20
+2026-01-04 23:37:28,607 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=50, active_workers=20/20
+2026-01-04 23:37:28,715 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/config/build.ts
+2026-01-04 23:37:28,805 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/object.ts
+2026-01-04 23:37:28,889 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/PromptHint.tsx
+2026-01-04 23:37:28,972 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Modal/index.tsx
+2026-01-04 23:37:29,165 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/MenuLayout/index.tsx
+2026-01-04 23:37:29,165 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:29,281 - Knowledge - INFO - Async storing batch of 4 embeddings
+2026-01-04 23:37:29,365 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:29,473 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils.ts
+2026-01-04 23:37:29,566 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/sync.ts
+2026-01-04 23:37:29,651 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ChatMessagePanel.tsx
+2026-01-04 23:37:30,026 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/sk.ts
+2026-01-04 23:37:30,144 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/ko.ts
+2026-01-04 23:37:30,241 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/tw.ts
+2026-01-04 23:37:30,760 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/SessionItem.tsx
+2026-01-04 23:37:30,769 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/tr.ts
+2026-01-04 23:37:30,774 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/store.ts
+2026-01-04 23:37:30,776 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/PromptToast.tsx
+2026-01-04 23:37:30,854 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/layout.tsx
+2026-01-04 23:37:30,945 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/en.ts
+2026-01-04 23:37:31,190 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/cs.ts
+2026-01-04 23:37:31,246 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ClearContextDivider.tsx
+2026-01-04 23:37:31,669 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/layout.tsx (ext=.tsx, size=1752)
+2026-01-04 23:37:31,842 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/cn.ts
+2026-01-04 23:37:31,848 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/token.ts
+2026-01-04 23:37:31,848 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ChatHeader.tsx
+2026-01-04 23:37:31,926 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 292, Duration: 0ms
+2026-01-04 23:37:32,016 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/jp.ts
+2026-01-04 23:37:32,123 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/SessionConfigModal.tsx
+2026-01-04 23:37:32,239 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/constant.ts
+2026-01-04 23:37:32,356 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/index.ts
+2026-01-04 23:37:32,542 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ChatActions.tsx
+2026-01-04 23:37:32,656 - Knowledge - INFO - [LLM_CALL] Completed: chat.tsx:chunk1, Duration: 36901ms, PromptTokens: 21356, CompletionTokens: 1178, Cost: $0.00261
+2026-01-04 23:37:32,906 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/typing.ts
+2026-01-04 23:37:33,026 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/index.ts (ext=.ts, size=757)
+2026-01-04 23:37:33,204 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/chat.tsx
+2026-01-04 23:37:33,204 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 1278ms
+2026-01-04 23:37:33,317 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/typing.ts (ext=.ts, size=207)
+2026-01-04 23:37:33,583 - Knowledge - INFO - Progress: 49.8% | Files: 108/215 | Rate: 1.42 files/sec | Queue: 38
+2026-01-04 23:37:33,589 - Knowledge - INFO - [kw6] Queue=38, InProgress=0, PendingWorkers=20/20, Completed=108/215 (50.2%)
+2026-01-04 23:37:33,590 - Knowledge - INFO - [kw19] Queue=38, InProgress=0, PendingWorkers=20/20, Completed=108/215 (50.2%)
+2026-01-04 23:37:33,686 - Knowledge - INFO - [kw20] Queue=38, InProgress=0, PendingWorkers=20/20, Completed=110/215 (51.2%)
+2026-01-04 23:37:33,686 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:37:33,759 - Knowledge - INFO - [kw15] Queue=38, InProgress=0, PendingWorkers=20/20, Completed=112/215 (52.1%)
+2026-01-04 23:37:33,848 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=38, active_workers=20/20
+2026-01-04 23:37:33,963 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=38, active_workers=20/20
+2026-01-04 23:37:34,109 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=38, active_workers=20/20
+2026-01-04 23:37:34,189 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/chat.tsx
+2026-01-04 23:37:34,313 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:37:34,332 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=38, active_workers=20/20
+2026-01-04 23:37:34,446 - Knowledge - INFO - Async storing batch of 4 embeddings
+2026-01-04 23:37:34,545 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:34,617 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:34,711 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/MenuLayout/index.tsx
+2026-01-04 23:37:34,902 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:35,025 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/platforms/google.ts
+2026-01-04 23:37:35,109 - Knowledge - INFO - Worker kw19 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/api.ts
+2026-01-04 23:37:35,234 - Knowledge - INFO - Worker kw20 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-ko.md
+2026-01-04 23:37:35,328 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/Popover/index.tsx
+2026-01-04 23:37:35,497 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/vercel-cn.md
+2026-01-04 23:37:35,629 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/platforms/openai.ts
+2026-01-04 23:37:35,780 - Knowledge - INFO - Worker kw19 processing /app/data/T0015/302558/b1186j2/NextChat-302558/vercel.json
+2026-01-04 23:37:36,002 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-ko.md (ext=.md, size=2311)
+2026-01-04 23:37:36,109 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/exporter.module.scss
+2026-01-04 23:37:36,146 - Knowledge - INFO - [LLM_CALL] Completed: MaskConfig.tsx:chunk1, Duration: 15943ms, PromptTokens: 2858, CompletionTokens: 363, Cost: $0.00043
+2026-01-04 23:37:36,334 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/vercel-cn.md (ext=.md, size=1872)
+2026-01-04 23:37:36,474 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/platforms/anthropic.ts
+2026-01-04 23:37:36,587 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/vercel.json (ext=.json, size=49)
+2026-01-04 23:37:36,767 - Knowledge - INFO - Worker kw20 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-es.md
+2026-01-04 23:37:36,871 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/components/home.module.scss
+2026-01-04 23:37:36,946 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/MaskConfig.tsx
+2026-01-04 23:37:36,947 - Knowledge - INFO - [LLM_CALL] Completed: SettingPanel.tsx:chunk1, Duration: 26738ms, PromptTokens: 2680, CompletionTokens: 369, Cost: $0.00042
+2026-01-04 23:37:37,061 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-ko.md
+2026-01-04 23:37:37,143 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/controller.ts
+2026-01-04 23:37:37,254 - Knowledge - INFO - Worker kw19 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-es.md
+2026-01-04 23:37:37,380 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-es.md (ext=.md, size=13945)
+2026-01-04 23:37:37,774 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/SettingPanel.tsx
+2026-01-04 23:37:37,900 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-ko.md (ext=.md, size=16089)
+2026-01-04 23:37:38,034 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/controller.ts (ext=.ts, size=914)
+2026-01-04 23:37:38,168 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-es.md (ext=.md, size=998)
+2026-01-04 23:37:38,276 - Knowledge - INFO - [LLM_CALL] Completed: UserPromptModal.tsx:chunk1, Duration: 29076ms, PromptTokens: 3194, CompletionTokens: 416, Cost: $0.00049
+2026-01-04 23:37:38,279 - Knowledge - INFO - Worker kw20 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-es.md
+2026-01-04 23:37:38,473 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/translation.md
+2026-01-04 23:37:38,739 - Knowledge - INFO - Worker kw19 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/vercel-ja.md
+2026-01-04 23:37:38,889 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/UserPromptModal.tsx
+2026-01-04 23:37:39,066 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-es.md (ext=.md, size=2206)
+2026-01-04 23:37:39,233 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 292, Duration: 0ms
+2026-01-04 23:37:39,240 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/translation.md (ext=.md, size=491)
+2026-01-04 23:37:39,355 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/vercel-ja.md (ext=.md, size=2234)
+2026-01-04 23:37:39,591 - Knowledge - INFO - Worker kw20 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-ko.md
+2026-01-04 23:37:39,710 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/index.tsx
+2026-01-04 23:37:39,712 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 479ms
+2026-01-04 23:37:39,805 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-cn.md
+2026-01-04 23:37:40,014 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-ko.md (ext=.md, size=963)
+2026-01-04 23:37:40,245 - Knowledge - INFO - Progress: 52.1% | Files: 114/215 | Rate: 1.36 files/sec | Queue: 22
+2026-01-04 23:37:40,246 - Knowledge - INFO - [LLM_CALL] Completed: upstash.ts:chunk1, Duration: 18288ms, PromptTokens: 2342, CompletionTokens: 287, Cost: $0.00035
+2026-01-04 23:37:40,331 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-cn.md (ext=.md, size=813)
+2026-01-04 23:37:40,447 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:37:40,549 - Knowledge - INFO - [kw16] Queue=22, InProgress=0, PendingWorkers=20/20, Completed=114/215 (53.0%)
+2026-01-04 23:37:40,673 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/cloud/upstash.ts
+2026-01-04 23:37:40,709 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:37:40,715 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:37:40,755 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:37:40,965 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:37:41,372 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=22, active_workers=20/20
+2026-01-04 23:37:41,542 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:37:41,606 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/PromptSetting.tsx
+2026-01-04 23:37:41,679 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/index.tsx
+2026-01-04 23:37:41,765 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:37:41,852 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-ko.md
+2026-01-04 23:37:41,934 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:42,018 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/merge.ts
+2026-01-04 23:37:42,127 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/UserPromptModal.tsx
+2026-01-04 23:37:42,205 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/SettingPanel.tsx
+2026-01-04 23:37:42,282 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/vercel-cn.md
+2026-01-04 23:37:42,407 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-es.md
+2026-01-04 23:37:42,538 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-cn.md
+2026-01-04 23:37:42,814 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/checkers.ts
+2026-01-04 23:37:42,939 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/MaskSetting.tsx
+2026-01-04 23:37:43,062 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/index.tsx
+2026-01-04 23:37:43,147 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-ko.md
+2026-01-04 23:37:43,255 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-es.md
+2026-01-04 23:37:43,372 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-cn.md (ext=.md, size=11833)
+2026-01-04 23:37:43,453 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/cloud/webdav.ts
+2026-01-04 23:37:43,558 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/MaskConfig.tsx
+2026-01-04 23:37:43,676 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/client.ts
+2026-01-04 23:37:43,759 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/translation.md
+2026-01-04 23:37:43,865 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-ko.md
+2026-01-04 23:37:43,975 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/vercel-es.md
+2026-01-04 23:37:44,291 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/cloud/upstash.ts
+2026-01-04 23:37:44,422 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/index.module.scss
+2026-01-04 23:37:44,522 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/cors.ts
+2026-01-04 23:37:44,631 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-cn.md
+2026-01-04 23:37:44,930 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/vercel-es.md (ext=.md, size=2148)
+2026-01-04 23:37:45,119 - Knowledge - INFO - [LLM_CALL] Completed: ModelSelect.tsx:chunk1, Duration: 41298ms, PromptTokens: 3176, CompletionTokens: 332, Cost: $0.00045
+2026-01-04 23:37:45,426 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-ja.md
+2026-01-04 23:37:45,523 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ModelSelect.tsx
+2026-01-04 23:37:45,634 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-ja.md (ext=.md, size=2325)
+2026-01-04 23:37:45,844 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-en.md
+2026-01-04 23:37:46,196 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-en.md (ext=.md, size=1979)
+2026-01-04 23:37:46,454 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:37:46,752 - Knowledge - INFO - [LLM_CALL] Completed: ChatInputPanel.tsx:chunk1, Duration: 33231ms, PromptTokens: 5328, CompletionTokens: 668, Cost: $0.00080
+2026-01-04 23:37:46,939 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ChatInputPanel.tsx
+2026-01-04 23:37:46,940 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 291, Duration: 0ms
+2026-01-04 23:37:47,320 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:37:47,329 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 388ms
+2026-01-04 23:37:47,334 - Knowledge - INFO - [kw8] Queue=18, InProgress=0, PendingWorkers=20/20, Completed=138/215 (64.2%)
+2026-01-04 23:37:47,347 - Knowledge - INFO - [kw15] Queue=18, InProgress=0, PendingWorkers=20/20, Completed=138/215 (64.2%)
+2026-01-04 23:37:47,348 - Knowledge - INFO - [kw4] Queue=18, InProgress=0, PendingWorkers=20/20, Completed=138/215 (64.2%)
+2026-01-04 23:37:47,543 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-cn.md
+2026-01-04 23:37:47,642 - Knowledge - INFO - Progress: 62.3% | Files: 138/215 | Rate: 1.53 files/sec | Queue: 18
+2026-01-04 23:37:47,778 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=18, active_workers=20/20
+2026-01-04 23:37:47,793 - Knowledge - INFO - [LLM_CALL] Completed: MessageActions.tsx:chunk1, Duration: 24769ms, PromptTokens: 4606, CompletionTokens: 676, Cost: $0.00073
+2026-01-04 23:37:47,860 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=18, active_workers=20/20
+2026-01-04 23:37:47,963 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=18, active_workers=20/20
+2026-01-04 23:37:48,068 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/vercel-es.md
+2026-01-04 23:37:48,165 - Knowledge - INFO - [kw20] Queue=18, InProgress=0, PendingWorkers=20/20, Completed=138/215 (64.2%)
+2026-01-04 23:37:48,337 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/MessageActions.tsx
+2026-01-04 23:37:48,337 - Knowledge - INFO - Async storing batch of 4 embeddings
+2026-01-04 23:37:48,337 - Knowledge - INFO - [kw3] Queue=14, InProgress=0, PendingWorkers=20/20, Completed=138/215 (64.2%)
+2026-01-04 23:37:48,478 - Knowledge - INFO - Async storing batch of 4 embeddings
+2026-01-04 23:37:48,590 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:48,699 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-ja.md
+2026-01-04 23:37:48,808 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=18, active_workers=20/20
+2026-01-04 23:37:48,938 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:37:49,014 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-en.md
+2026-01-04 23:37:49,093 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=14, active_workers=20/20
+2026-01-04 23:37:49,181 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/vercel-ko.md
+2026-01-04 23:37:49,268 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/CODE_OF_CONDUCT.md
+2026-01-04 23:37:49,348 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-en.md
+2026-01-04 23:37:49,473 - Knowledge - INFO - Async storing batch of 4 embeddings
+2026-01-04 23:37:49,585 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ModelSelect.tsx
+2026-01-04 23:37:49,675 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-en.md (ext=.md, size=909)
+2026-01-04 23:37:49,767 - Knowledge - INFO - Async storing batch of 5 embeddings
+2026-01-04 23:37:49,863 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/vercel-ko.md (ext=.md, size=2332)
+2026-01-04 23:37:49,958 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/CODE_OF_CONDUCT.md (ext=.md, size=5225)
+2026-01-04 23:37:50,183 - Knowledge - INFO - Worker kw20 processing /app/data/T0015/302558/b1186j2/NextChat-302558/next.config.mjs
+2026-01-04 23:37:50,282 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/EditMessageModal.tsx
+2026-01-04 23:37:50,376 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-cn.md
+2026-01-04 23:37:50,467 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/302558/b1186j2/NextChat-302558/public/serviceWorkerRegister.js
+2026-01-04 23:37:50,533 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 291, Duration: 0ms
+2026-01-04 23:37:50,539 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/user-manual-cn.md
+2026-01-04 23:37:50,662 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/README_CN.md
+2026-01-04 23:37:50,738 - Knowledge - INFO - Worker kw20 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docker-compose.yml
+2026-01-04 23:37:50,814 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/ChatInputPanel.tsx
+2026-01-04 23:37:50,926 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-cn.md (ext=.md, size=1888)
+2026-01-04 23:37:51,000 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:37:51,022 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/public/serviceWorkerRegister.js (ext=.js, size=370)
+2026-01-04 23:37:51,117 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 584ms
+2026-01-04 23:37:51,198 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/user-manual-cn.md (ext=.md, size=5730)
+2026-01-04 23:37:51,310 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/README_CN.md (ext=.md, size=8934)
+2026-01-04 23:37:51,406 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docker-compose.yml (ext=.yml, size=1132)
+2026-01-04 23:37:51,487 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/components/MessageActions.tsx
+2026-01-04 23:37:51,594 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-ja.md
+2026-01-04 23:37:51,780 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/302558/b1186j2/NextChat-302558/public/robots.txt
+2026-01-04 23:37:51,895 - Knowledge - INFO - Progress: 66.5% | Files: 143/215 | Rate: 1.51 files/sec | Queue: 0
+2026-01-04 23:37:51,995 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-ja.md
+2026-01-04 23:37:52,081 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/README.md
+2026-01-04 23:37:52,199 - Knowledge - INFO - Worker kw20 processing /app/data/T0015/302558/b1186j2/NextChat-302558/public/serviceWorker.js
+2026-01-04 23:37:52,319 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/index.module.scss
+2026-01-04 23:37:52,402 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-ja.md (ext=.md, size=1109)
+2026-01-04 23:37:52,516 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/public/robots.txt (ext=.txt, size=73)
+2026-01-04 23:37:52,753 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-ja.md (ext=.md, size=15212)
+2026-01-04 23:37:52,834 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/README.md (ext=.md, size=15671)
+2026-01-04 23:37:52,971 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/public/serviceWorker.js (ext=.js, size=386)
+2026-01-04 23:37:53,169 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-en.md
+2026-01-04 23:37:53,319 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:37:53,446 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/302558/b1186j2/NextChat-302558/tsconfig.json
+2026-01-04 23:37:53,535 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/302558/b1186j2/NextChat-302558/tailwind.config.js
+2026-01-04 23:37:53,743 - Knowledge - INFO - Worker kw20 processing /app/data/T0015/302558/b1186j2/NextChat-302558/public/prompts.json
+2026-01-04 23:37:53,895 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-en.md (ext=.md, size=11171)
+2026-01-04 23:37:54,121 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/tsconfig.json (ext=.json, size=670)
+2026-01-04 23:37:54,198 - Knowledge - INFO - [LLM_CALL] Completed: api.ts:chunk1, Duration: 13523ms, PromptTokens: 3256, CompletionTokens: 435, Cost: $0.00050
+2026-01-04 23:37:54,299 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/public/prompts.json (ext=.json, size=142085)
+2026-01-04 23:37:54,432 - Knowledge - INFO - Async storage completed for 4 embeddings
+2026-01-04 23:37:54,448 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:37:54,530 - Knowledge - INFO - Async storage completed for 4 embeddings
+2026-01-04 23:37:54,658 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/api.ts
+2026-01-04 23:37:54,693 - Knowledge - INFO - Processing batch of 2 files
+2026-01-04 23:37:54,774 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/next.config.mjs (small file (2244 bytes))
+2026-01-04 23:37:54,891 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:37:55,051 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:37:55,170 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:37:55,221 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/public/serviceWorkerRegister.js
+2026-01-04 23:37:55,338 - Knowledge - INFO - Async storage completed for 4 embeddings
+2026-01-04 23:37:55,438 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-en.md
+2026-01-04 23:37:55,565 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/vercel-ko.md
+2026-01-04 23:37:55,688 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/api.ts
+2026-01-04 23:37:55,783 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/public/robots.txt
+2026-01-04 23:37:55,939 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:37:56,001 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/cloudflare-pages-cn.md
+2026-01-04 23:37:56,017 - Knowledge - INFO - Fast-tracked /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/index.ts (small file (2428 bytes))
+2026-01-04 23:37:56,084 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/user-manual-cn.md
+2026-01-04 23:37:56,178 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/vercel.json
+2026-01-04 23:37:56,417 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/next.config.mjs
+2026-01-04 23:37:56,508 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-ja.md
+2026-01-04 23:37:56,521 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 272, Duration: 0ms
+2026-01-04 23:37:56,854 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-ja.md
+2026-01-04 23:37:56,889 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:37:56,944 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/synchronise-chat-logs-es.md
+2026-01-04 23:37:57,046 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docker-compose.yml
+2026-01-04 23:37:57,117 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/faq-en.md
+2026-01-04 23:37:57,223 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 701ms
+2026-01-04 23:37:57,295 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/tsconfig.json
+2026-01-04 23:37:57,630 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/docs/vercel-ja.md
+2026-01-04 23:37:57,925 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/public/serviceWorker.js
+2026-01-04 23:37:58,059 - Knowledge - INFO - Progress: 74.9% | Files: 161/215 | Rate: 1.60 files/sec | Queue: 0
+2026-01-04 23:37:58,668 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/public/prompts.json
+2026-01-04 23:38:00,275 - Knowledge - INFO - [LLM_CALL] Completed: config.ts:chunk1, Duration: 30455ms, PromptTokens: 3066, CompletionTokens: 281, Cost: $0.00042
+2026-01-04 23:38:00,481 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/config.ts
+2026-01-04 23:38:01,341 - Knowledge - INFO - [LLM_CALL] Completed: prompt.ts:chunk1, Duration: 16710ms, PromptTokens: 3004, CompletionTokens: 353, Cost: $0.00044
+2026-01-04 23:38:01,555 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/prompt.ts
+2026-01-04 23:38:01,678 - Knowledge - INFO - Async storage completed for 4 embeddings
+2026-01-04 23:38:02,510 - Knowledge - INFO - [LLM_CALL] Completed: chat.ts:chunk1, Duration: 42285ms, PromptTokens: 9926, CompletionTokens: 519, Cost: $0.00120
+2026-01-04 23:38:02,664 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/chat.ts
+2026-01-04 23:38:04,522 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/index.tsx
+2026-01-04 23:38:04,527 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:38:04,863 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/chat.ts
+2026-01-04 23:38:05,162 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/index.ts
+2026-01-04 23:38:05,539 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/config.ts
+2026-01-04 23:38:05,922 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/prompt.ts
+2026-01-04 23:38:06,202 - Knowledge - INFO - [LLM_CALL] Completed: DangerItems.tsx:chunk1, Duration: 25527ms, PromptTokens: 2780, CompletionTokens: 391, Cost: $0.00043
+2026-01-04 23:38:06,435 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/DangerItems.tsx
+2026-01-04 23:38:06,446 - Knowledge - INFO - [LLM_CALL] Completed: ko.ts:chunk1, Duration: 32774ms, PromptTokens: 4864, CompletionTokens: 270, Cost: $0.00059
+2026-01-04 23:38:06,739 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/ko.ts
+2026-01-04 23:38:06,743 - Knowledge - INFO - [LLM_CALL] Completed: update.ts:chunk1, Duration: 46519ms, PromptTokens: 2912, CompletionTokens: 412, Cost: $0.00046
+2026-01-04 23:38:07,066 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/update.ts
+2026-01-04 23:38:07,066 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Sidebar/index.tsx
+2026-01-04 23:38:07,129 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:38:07,519 - Knowledge - INFO - [LLM_CALL] Completed: mask.ts:chunk1, Duration: 24371ms, PromptTokens: 2366, CompletionTokens: 265, Cost: $0.00034
+2026-01-04 23:38:07,728 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/mask.ts
+2026-01-04 23:38:07,728 - Knowledge - INFO - [LLM_CALL] Completed: ChatPanel.tsx:chunk1, Duration: 53969ms, PromptTokens: 4688, CompletionTokens: 442, Cost: $0.00065
+2026-01-04 23:38:08,070 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/ChatPanel.tsx
+2026-01-04 23:38:08,195 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:38:09,508 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:38:09,513 - Knowledge - INFO - [LLM_CALL] Completed: sync.ts:chunk1, Duration: 38323ms, PromptTokens: 2472, CompletionTokens: 583, Cost: $0.00048
+2026-01-04 23:38:09,842 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/sync.ts
+2026-01-04 23:38:09,850 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:38:10,190 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/index.tsx
+2026-01-04 23:38:10,208 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:38:10,255 - Knowledge - INFO - [LLM_CALL] Completed: tailwind.config.js:chunk1, Duration: 15581ms, PromptTokens: 6938, CompletionTokens: 165, Cost: $0.00076
+2026-01-04 23:38:10,557 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Chat/ChatPanel.tsx
+2026-01-04 23:38:10,579 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:38:10,734 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/tailwind.config.js
+2026-01-04 23:38:10,740 - Knowledge - INFO - [LLM_CALL] Completed: constant.ts:chunk1, Duration: 22967ms, PromptTokens: 4444, CompletionTokens: 524, Cost: $0.00065
+2026-01-04 23:38:10,823 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Sidebar/index.tsx
+2026-01-04 23:38:11,135 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/constant.ts
+2026-01-04 23:38:11,497 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:38:11,631 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/DangerItems.tsx
+2026-01-04 23:38:11,756 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/CODE_OF_CONDUCT.md
+2026-01-04 23:38:11,896 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:38:11,919 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/SettingHeader.tsx
+2026-01-04 23:38:12,228 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/utils/cloud/index.ts
+2026-01-04 23:38:12,242 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/README_CN.md
+2026-01-04 23:38:12,398 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:38:12,441 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:38:13,026 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/ko.ts
+2026-01-04 23:38:13,127 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/README.md
+2026-01-04 23:38:13,338 - Knowledge - INFO - [LLM_CALL] Completed: fr.ts:chunk1, Duration: 32663ms, PromptTokens: 5732, CompletionTokens: 226, Cost: $0.00066
+2026-01-04 23:38:13,470 - Knowledge - INFO - Async storage completed for 4 embeddings
+2026-01-04 23:38:13,650 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/fr.ts
+2026-01-04 23:38:14,139 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/tailwind.config.js
+2026-01-04 23:38:14,175 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/layout.tsx
+2026-01-04 23:38:14,280 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/update.ts
+2026-01-04 23:38:15,373 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/constant.ts
+2026-01-04 23:38:15,826 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/sync.ts
+2026-01-04 23:38:16,011 - Knowledge - INFO - [LLM_CALL] Completed: bn.ts:chunk1, Duration: 48107ms, PromptTokens: 7154, CompletionTokens: 194, Cost: $0.00079
+2026-01-04 23:38:16,069 - Knowledge - INFO - Async storage completed for 5 embeddings
+2026-01-04 23:38:16,430 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/bn.ts
+2026-01-04 23:38:16,470 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/typing.ts
+2026-01-04 23:38:16,595 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/mask.ts
+2026-01-04 23:38:16,601 - Knowledge - INFO - [LLM_CALL] Completed: access.ts:chunk1, Duration: 57015ms, PromptTokens: 2468, CompletionTokens: 420, Cost: $0.00041
+2026-01-04 23:38:17,198 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/access.ts
+2026-01-04 23:38:17,199 - Knowledge - INFO - [LLM_CALL] Completed: en.ts:chunk1, Duration: 21579ms, PromptTokens: 6724, CompletionTokens: 140, Cost: $0.00073
+2026-01-04 23:38:17,690 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/en.ts
+2026-01-04 23:38:17,767 - Knowledge - INFO - [LLM_CALL] Completed: ar.ts:chunk1, Duration: 34504ms, PromptTokens: 5660, CompletionTokens: 191, Cost: $0.00064
+2026-01-04 23:38:18,189 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/ar.ts
+2026-01-04 23:38:18,190 - Knowledge - INFO - [LLM_CALL] Completed: it.ts:chunk1, Duration: 53204ms, PromptTokens: 4576, CompletionTokens: 337, Cost: $0.00059
+2026-01-04 23:38:18,483 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/it.ts
+2026-01-04 23:38:18,488 - Knowledge - INFO - [LLM_CALL] Completed: cn.ts:chunk1, Duration: 20318ms, PromptTokens: 12006, CompletionTokens: 135, Cost: $0.00125
+2026-01-04 23:38:18,900 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/cn.ts
+2026-01-04 23:38:18,912 - Knowledge - INFO - [LLM_CALL] Completed: vi.ts:chunk1, Duration: 56936ms, PromptTokens: 4946, CompletionTokens: 267, Cost: $0.00060
+2026-01-04 23:38:19,388 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/vi.ts
+2026-01-04 23:38:19,443 - Knowledge - INFO - [LLM_CALL] Completed: es.ts:chunk1, Duration: 22222ms, PromptTokens: 4412, CompletionTokens: 389, Cost: $0.00060
+2026-01-04 23:38:19,828 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/es.ts
+2026-01-04 23:38:19,835 - Knowledge - INFO - [LLM_CALL] Completed: tw.ts:chunk1, Duration: 46249ms, PromptTokens: 9336, CompletionTokens: 203, Cost: $0.00101
+2026-01-04 23:38:20,258 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/tw.ts
+2026-01-04 23:38:20,285 - Knowledge - INFO - [LLM_CALL] Completed: ProviderSetting.tsx:chunk1, Duration: 39564ms, PromptTokens: 4328, CompletionTokens: 285, Cost: $0.00055
+2026-01-04 23:38:20,606 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/ProviderSetting.tsx
+2026-01-04 23:38:20,628 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/tw.ts
+2026-01-04 23:38:20,672 - Knowledge - INFO - [LLM_CALL] Completed: ru.ts:chunk1, Duration: 46035ms, PromptTokens: 4802, CompletionTokens: 279, Cost: $0.00059
+2026-01-04 23:38:21,323 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/ru.ts
+2026-01-04 23:38:21,396 - Knowledge - INFO - [LLM_CALL] Completed: google.ts:chunk1, Duration: 42500ms, PromptTokens: 4560, CompletionTokens: 451, Cost: $0.00064
+2026-01-04 23:38:21,844 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/platforms/google.ts
+2026-01-04 23:38:21,869 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/en.ts
+2026-01-04 23:38:21,947 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 273, Duration: 89ms
+2026-01-04 23:38:22,509 - Knowledge - INFO - [LLM_CALL] Completed: SyncItems.tsx:chunk1, Duration: 76418ms, PromptTokens: 2366, CompletionTokens: 397, Cost: $0.00040
+2026-01-04 23:38:22,812 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/SyncItems.tsx
+2026-01-04 23:38:22,818 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 961ms
+2026-01-04 23:38:23,289 - Knowledge - INFO - Progress: 85.1% | Files: 187/215 | Rate: 1.51 files/sec | Queue: 0
+2026-01-04 23:38:23,337 - Knowledge - INFO - [LLM_CALL] Completed: no.ts:chunk1, Duration: 35000ms, PromptTokens: 3614, CompletionTokens: 300, Cost: $0.00048
+2026-01-04 23:38:23,713 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/no.ts
+2026-01-04 23:38:23,898 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 273, Duration: 0ms
+2026-01-04 23:38:24,246 - Knowledge - INFO - [LLM_CALL] Completed: ModelSetting.tsx:chunk1, Duration: 68515ms, PromptTokens: 3454, CompletionTokens: 363, Cost: $0.00049
+2026-01-04 23:38:24,558 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/ModelSetting.tsx
+2026-01-04 23:38:24,598 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 701ms
+2026-01-04 23:38:25,234 - Knowledge - INFO - Progress: 87.4% | Files: 191/215 | Rate: 1.49 files/sec | Queue: 0
+2026-01-04 23:38:25,246 - Knowledge - INFO - [LLM_CALL] Completed: de.ts:chunk1, Duration: 33350ms, PromptTokens: 4614, CompletionTokens: 279, Cost: $0.00057
+2026-01-04 23:38:25,795 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/de.ts
+2026-01-04 23:38:25,847 - Knowledge - INFO - [LLM_CALL] Completed: sk.ts:chunk1, Duration: 52262ms, PromptTokens: 9698, CompletionTokens: 226, Cost: $0.00106
+2026-01-04 23:38:26,289 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/sk.ts
+2026-01-04 23:38:26,312 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:38:26,473 - Knowledge - INFO - [LLM_CALL] Completed: id.ts:chunk1, Duration: 27418ms, PromptTokens: 6890, CompletionTokens: 264, Cost: $0.00079
+2026-01-04 23:38:26,767 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/bn.ts
+2026-01-04 23:38:26,895 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/id.ts
+2026-01-04 23:38:26,914 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:38:26,955 - Knowledge - INFO - [LLM_CALL] Completed: AppSetting.tsx:chunk1, Duration: 61299ms, PromptTokens: 3384, CompletionTokens: 375, Cost: $0.00049
+2026-01-04 23:38:27,284 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/tw.ts
+2026-01-04 23:38:27,307 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/fr.ts
+2026-01-04 23:38:27,410 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/AppSetting.tsx
+2026-01-04 23:38:27,450 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/cn.ts
+2026-01-04 23:38:27,567 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:38:27,722 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/en.ts
+2026-01-04 23:38:27,750 - Knowledge - INFO - [LLM_CALL] Completed: cs.ts:chunk1, Duration: 28453ms, PromptTokens: 5170, CompletionTokens: 419, Cost: $0.00068
+2026-01-04 23:38:27,754 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/index.ts
+2026-01-04 23:38:28,111 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/store/access.ts
+2026-01-04 23:38:28,422 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/cs.ts
+2026-01-04 23:38:28,451 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/cn.ts
+2026-01-04 23:38:28,505 - Knowledge - INFO - [LLM_CALL] Completed: openai.ts:chunk1, Duration: 36588ms, PromptTokens: 5612, CompletionTokens: 549, Cost: $0.00078
+2026-01-04 23:38:28,738 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/es.ts
+2026-01-04 23:38:28,899 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/tw.ts
+2026-01-04 23:38:29,056 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/masks/index.ts
+2026-01-04 23:38:29,058 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/platforms/openai.ts
+2026-01-04 23:38:29,069 - Knowledge - INFO - [LLM_CALL] Completed: pt.ts:chunk1, Duration: 23796ms, PromptTokens: 7992, CompletionTokens: 192, Cost: $0.00088
+2026-01-04 23:38:29,326 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/ar.ts
+2026-01-04 23:38:29,848 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/pt.ts
+2026-01-04 23:38:29,849 - Knowledge - INFO - [LLM_CALL] Completed: tr.ts:chunk1, Duration: 42201ms, PromptTokens: 4818, CompletionTokens: 309, Cost: $0.00061
+2026-01-04 23:38:29,983 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/en.ts
+2026-01-04 23:38:30,209 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/tr.ts
+2026-01-04 23:38:30,211 - Knowledge - INFO - [LLM_CALL] Completed: SyncConfigModal.tsx:chunk1, Duration: 36437ms, PromptTokens: 3446, CompletionTokens: 425, Cost: $0.00051
+2026-01-04 23:38:30,595 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/SyncConfigModal.tsx
+2026-01-04 23:38:30,602 - Knowledge - INFO - [LLM_CALL] Completed: anthropic.ts:chunk1, Duration: 25056ms, PromptTokens: 6028, CompletionTokens: 594, Cost: $0.00084
+2026-01-04 23:38:30,901 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/platforms/anthropic.ts
+2026-01-04 23:38:30,902 - Knowledge - INFO - [LLM_CALL] Completed: jp.ts:chunk1, Duration: 19751ms, PromptTokens: 6548, CompletionTokens: 203, Cost: $0.00074
+2026-01-04 23:38:31,193 - Knowledge - INFO - done ingest for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/jp.ts
+2026-01-04 23:38:31,198 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 273, Duration: 0ms
+2026-01-04 23:38:31,469 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:38:31,469 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 271ms
+2026-01-04 23:38:31,640 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/vi.ts
+2026-01-04 23:38:31,774 - Knowledge - INFO - Progress: 93.5% | Files: 205/215 | Rate: 1.51 files/sec | Queue: 0
+2026-01-04 23:38:31,815 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:38:31,815 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:38:31,816 - Knowledge - INFO - Processing batch of 4 files
+2026-01-04 23:38:31,821 - Knowledge - INFO - Processing batch of 5 files
+2026-01-04 23:38:31,876 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/ru.ts
+2026-01-04 23:38:32,087 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/it.ts
+2026-01-04 23:38:32,180 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/platforms/google.ts
+2026-01-04 23:38:32,265 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/sk.ts
+2026-01-04 23:38:32,366 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/SyncItems.tsx
+2026-01-04 23:38:32,452 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/no.ts
+2026-01-04 23:38:32,559 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/cn.ts
+2026-01-04 23:38:32,652 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/platforms/openai.ts
+2026-01-04 23:38:32,752 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/tr.ts
+2026-01-04 23:38:32,833 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/ModelSetting.tsx
+2026-01-04 23:38:32,918 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/id.ts
+2026-01-04 23:38:33,035 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/de.ts
+2026-01-04 23:38:33,140 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/platforms/anthropic.ts
+2026-01-04 23:38:33,211 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/cs.ts
+2026-01-04 23:38:33,293 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/AppSetting.tsx
+2026-01-04 23:38:33,474 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/pt.ts
+2026-01-04 23:38:33,553 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/client/controller.ts
+2026-01-04 23:38:33,630 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/locales/jp.ts
+2026-01-04 23:38:33,726 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/ProviderSetting.tsx
+2026-01-04 23:38:34,269 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/302558/b1186j2/NextChat-302558/app/containers/Settings/components/SyncConfigModal.tsx
+2026-01-04 23:38:34,388 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 274, Duration: 0ms
+2026-01-04 23:38:34,574 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 186ms
+2026-01-04 23:38:34,765 - Knowledge - INFO - Progress: 100.0% | Files: 215/215 | Rate: 1.55 files/sec | Queue: 0
+2026-01-04 23:38:34,927 - Knowledge - INFO - Knowledge creation complete
+2026-01-04 23:38:35,089 - Knowledge - INFO - ==================================================
+2026-01-04 23:38:35,279 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2026-01-04 23:38:35,476 - Knowledge - INFO - ==================================================
+2026-01-04 23:38:35,637 - Knowledge - INFO - Total processing time: 139.39 seconds (2.32 minutes)
+2026-01-04 23:38:35,828 - Knowledge - INFO - Files processed: 0
+2026-01-04 23:38:36,012 - Knowledge - INFO - Processing rate: 0.00 files/second
+2026-01-04 23:38:36,212 - Knowledge - INFO - 
+[TIME_BREAKDOWN]
+2026-01-04 23:38:36,416 - Knowledge - INFO - File Reading: 0.00s (0.0%)
+2026-01-04 23:38:36,588 - Knowledge - INFO - LLM Processing: 2000.51s (1435.2%)
+2026-01-04 23:38:36,784 - Knowledge - INFO - MongoDB Operations: 0.00s (0.0%)
+2026-01-04 23:38:37,000 - Knowledge - INFO - Redis Operations: 0.00s (0.0%)
+2026-01-04 23:38:37,152 - Knowledge - INFO - WebSocket Communication: 13.42s (9.6%)
+2026-01-04 23:38:37,318 - Knowledge - INFO - 
+[LLM_STATS]
+2026-01-04 23:38:37,489 - Knowledge - INFO - Total LLM calls: 71
+2026-01-04 23:38:37,706 - Knowledge - INFO - Average LLM response time: 28176ms
+2026-01-04 23:38:37,904 - Knowledge - INFO - Average prompt tokens: 5072.2
+2026-01-04 23:38:38,107 - Knowledge - INFO - Average completion tokens: 402.0
+2026-01-04 23:38:38,314 - Knowledge - INFO - Total prompt tokens: 360126
+2026-01-04 23:38:38,533 - Knowledge - INFO - Total completion tokens: 28545
+2026-01-04 23:38:38,704 - Knowledge - INFO - Total LLM cost: $0.0474
+2026-01-04 23:38:38,866 - Knowledge - INFO - 
+[DATABASE_STATS]
+2026-01-04 23:38:39,069 - Knowledge - INFO - MongoDB operations: 0
+2026-01-04 23:38:39,276 - Knowledge - INFO - Redis operations: 0
+2026-01-04 23:38:39,636 - Knowledge - INFO - 
+[COMMUNICATION_STATS]
+2026-01-04 23:38:39,806 - Knowledge - INFO - WebSocket messages sent: 31
+2026-01-04 23:38:40,011 - Knowledge - INFO - Average message size: 143.0 bytes
+2026-01-04 23:38:40,205 - Knowledge - INFO - 
+[WORKER_STATS]
+2026-01-04 23:38:40,364 - Knowledge - INFO - 
+[FILE_TYPE_STATS]
+2026-01-04 23:38:40,591 - Knowledge - INFO - 
+[SLOWEST_FILES]
+2026-01-04 23:38:40,785 - Knowledge - INFO - ==================================================
+2026-01-04 23:38:40,978 - Knowledge - INFO - ==================================================
+2026-01-04 23:38:41,193 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2026-01-04 23:38:41,357 - Knowledge - INFO - ==================================================
+2026-01-04 23:38:41,553 - Knowledge - INFO - Total processing time: 145.33 seconds (2.42 minutes)
+2026-01-04 23:38:41,759 - Knowledge - INFO - Files processed: 215 of 215
+2026-01-04 23:38:41,957 - Knowledge - INFO - Processing rate: 1.48 files/second
+2026-01-04 23:38:42,152 - Knowledge - INFO - WebSocket messages sent: 15
+2026-01-04 23:38:42,350 - Knowledge - INFO - MongoDB operations: 215
+2026-01-04 23:38:42,570 - Knowledge - INFO - Average MongoDB ops per file: 1.00
+2026-01-04 23:38:42,720 - Knowledge - INFO - LLM costs: $0.0528
+2026-01-04 23:38:42,874 - Knowledge - INFO - Prompt tokens: 402846
+2026-01-04 23:38:43,097 - Knowledge - INFO - Completion tokens: 31194
+2026-01-04 23:38:43,265 - Knowledge - INFO - Updating org costs, total cost: 0.052762199999999995
+2026-01-04 23:38:44,493 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 267, Duration: 0ms
+2026-01-04 23:38:44,648 - Knowledge - INFO - Saving knowledge to Redis...
+2026-01-04 23:38:44,974 - Knowledge - INFO - Knowledge saved to Redis successfully
