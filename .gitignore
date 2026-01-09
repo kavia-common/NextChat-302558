@@ -44,3 +44,4 @@ dev
 
 *.key
 *.key.pub
+.file_activity_report.json
